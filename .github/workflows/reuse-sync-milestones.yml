@@ -9,10 +9,10 @@ jobs:
       contents: read
       issues: write
     steps:
-      - name: Checkout standards from veda-gaia/.github
+      - name: Checkout standards from nubo-educacao/.github
         uses: actions/checkout@v4
         with:
-          repository: veda-gaia/.github
+          repository: nubo-educacao/.github
           ref: main
 
       - name: Install jq & yq

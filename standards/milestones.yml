@@ -1,10 +1,10 @@
 milestones:
-  - title: Sprint 8
-    description: Correção de bugs e melhorias finais
+  - title: Sprint 1
+    description: Setup do projeto
     state: open
-    due_on: 2025-11-09T23:59:59Z
-  - title: Sprint 9
-    description: Expo Cannabis
+    due_on: 2025-11-21T23:59:59Z
+  - title: Sprint 2
+    description: Primeiros elementos funcionais
     state: open
-    due_on: 2025-11-23T23:59:59Z
+    due_on: 2025-11-28T23:59:59Z
 ### THIS WORKS

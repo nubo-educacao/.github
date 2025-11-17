@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       organization:
-        description: "Org login (ex.: veda-gaia)"
+        description: "Org login (ex.: nubo-educacao)"
         required: true
         type: string
       project_number:

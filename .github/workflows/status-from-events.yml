@@ -6,7 +6,7 @@ on:
       project_url:
         type: string
         required: false
-        default: "https://github.com/orgs/veda-gaia/projects/1"
+        default: "https://github.com/orgs/nubo-educacao/projects/1"
     secrets:
       GH_PROJECT_TOKEN:
         required: true
@@ -60,9 +60,9 @@ jobs:
   set-in-progress:
     needs: detect-issue-number
     if: github.event_name == 'push' && needs.detect-issue-number.outputs.issue != ''
-    uses: veda-gaia/.github/.github/workflows/project-set-status.yml@main
+    uses: nubo-educacao/.github/.github/workflows/project-set-status.yml@main
     with:
-      organization: veda-gaia
+      organization: nubo-educacao
       project_number: 1
       repo: ${{ github.event.repository.name }}
       issue_number: "${{ needs.detect-issue-number.outputs.issue }}"
@@ -74,9 +74,9 @@ jobs:
   set-code-review:
     needs: detect-issue-number
     if: github.event_name == 'pull_request' && github.event.action == 'opened' && needs.detect-issue-number.outputs.issue != ''
-    uses: veda-gaia/.github/.github/workflows/project-set-status.yml@main
+    uses: nubo-educacao/.github/.github/workflows/project-set-status.yml@main
     with:
-      organization: veda-gaia
+      organization: nubo-educacao
       project_number: 1
       repo: ${{ github.event.repository.name }}
       issue_number: "${{ needs.detect-issue-number.outputs.issue }}"
@@ -185,9 +185,9 @@ jobs:
     strategy:
       matrix:
         issue: ${{ fromJSON(needs.collect-ready-for-staging.outputs.issues) }}
-    uses: veda-gaia/.github/.github/workflows/project-set-status.yml@main
+    uses: nubo-educacao/.github/.github/workflows/project-set-status.yml@main
     with:
-      organization: veda-gaia
+      organization: nubo-educacao
       project_number: 1
       repo: ${{ github.event.repository.name }}
       issue_number: "${{ matrix.issue }}"
@@ -198,9 +198,9 @@ jobs:
   # ---- Ready for Prod (Issue labeled uat-approved) ----
   ready-for-prod-on-issue-label:
     if: github.event_name == 'issues' && github.event.action == 'labeled' && github.event.label.name == 'uat-approved'
-    uses: veda-gaia/.github/.github/workflows/project-set-status.yml@main
+    uses: nubo-educacao/.github/.github/workflows/project-set-status.yml@main
     with:
-      organization: veda-gaia
+      organization: nubo-educacao
       project_number: 1
       repo: ${{ github.event.repository.name }}
       issue_number: "${{ github.event.issue.number }}"
@@ -266,9 +266,9 @@ jobs:
     strategy:
       matrix:
         issue: ${{ fromJSON(needs.collect-ready-for-prod.outputs.issues) }}
-    uses: veda-gaia/.github/.github/workflows/project-set-status.yml@main
+    uses: nubo-educacao/.github/.github/workflows/project-set-status.yml@main
     with:
-      organization: veda-gaia
+      organization: nubo-educacao
       project_number: 1
       repo: ${{ github.event.repository.name }}
       issue_number: "${{ matrix.issue }}"

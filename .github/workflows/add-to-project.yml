@@ -6,7 +6,7 @@ on:
       project_url:
         type: string
         required: false
-        default: "https://github.com/orgs/veda-gaia/projects/1"
+        default: "https://github.com/orgs/nubo-educacao/projects/1"
     secrets:
       GH_PROJECT_TOKEN:
         required: true
@@ -19,5 +19,5 @@ jobs:
     steps:
       - uses: actions/add-to-project@v1.0.2
         with:
-          project-url: ${{ inputs.project_url || 'https://github.com/orgs/veda-gaia/projects/1' }}
+          project-url: ${{ inputs.project_url || 'https://github.com/orgs/nubo-educacao/projects/1' }}
           github-token: ${{ secrets.GH_PROJECT_TOKEN }}

@@ -78,7 +78,7 @@ jobs:
         if: steps.decide.outputs.skip != 'true'
         uses: actions/checkout@v4
         with:
-          repository: veda-gaia/.github
+          repository: nubo-educacao/.github
           ref: main
           path: central
 
