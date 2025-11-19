@@ -7,4 +7,8 @@ milestones:
     description: Primeiros elementos funcionais
     state: open
     due_on: 2025-11-28T23:59:59Z
+  - title: Sprint 3
+    description: Validação da arquitetura, design e visão de negócio
+    state: open
+    due_on: 2025-05-12T23:59:59Z
 ### THIS WORKS
