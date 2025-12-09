@@ -19,4 +19,12 @@ milestones:
     description: Chatbot integrado e funcionalidades avançadas
     state: open
     due_on: 2025-12-19T23:59:59Z
+  - title: Sprint 6
+    description: Perfil e preferências e Detalhes de oportunidades
+    state: open
+    due_on: 2025-12-26T23:59:59Z
+  - title: Sprint 7
+    description: Cloudinha no whatsapp e instagram
+    state: open
+    due_on: 2026-01-02T23:59:59Z
 ### THIS WORKS
